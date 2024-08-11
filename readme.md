@@ -37,9 +37,9 @@ source myenv/bin/activate
 
 ### Step 3: Install Dependencies
 
-\`\`\`bash
-pip install django psycopg2-binary djangorestframework djangorestframework-simplejwt
-\`\`\`
+```bash
+pip install django psycopg2-binary djangorestframework djangorestframework-simplejwt```
+
 
 ### Step 4: Setup PostgreSQL
 
@@ -49,9 +49,8 @@ pip install django psycopg2-binary djangorestframework djangorestframework-simpl
    - Open pgAdmin and create a new database (e.g., `myprojectdb`).
    - Create a new user (e.g., `myprojectuser`) and set a password.
    - Grant all privileges to the user for the database.
-
-3. **Configure Database in Django**: Update `DATABASES` in `myproject/settings.py`:
-   \`\`\`python
+```
+python
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql',
@@ -61,15 +60,15 @@ pip install django psycopg2-binary djangorestframework djangorestframework-simpl
            'HOST': 'localhost',
            'PORT': '5432',
        }
-   }
-   \`\`\`
+   }```
+
 
 ### Step 5:  Apply Migrations
 
-\`\`\`bash
+```bash
 python manage.py makemigrations
 python manage.py migrate
-\`\`\`
+```
 
 ### Step 6: Create a Superuser
 
