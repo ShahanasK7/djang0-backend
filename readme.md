@@ -73,14 +73,12 @@ python manage.py migrate
 ```
 
 ### Step 6: Create a Superuser
-```
-bash
+```bash
 python manage.py createsuperuser
 ```
 
 ### Step 7: Run the Development Server
-```
-bash
+```bash
 python manage.py runserver
 ```
 
