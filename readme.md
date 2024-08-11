@@ -64,7 +64,7 @@ pip install django psycopg2-binary djangorestframework djangorestframework-simpl
    }
    \`\`\`
 
-### Step 5: Apply Migrations
+### Step 5:  Apply Migrations
 
 \`\`\`bash
 python manage.py makemigrations
