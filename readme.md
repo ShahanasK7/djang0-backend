@@ -89,7 +89,7 @@ python manage.py runserver
 - **URL**: `http://127.0.0.1:8000/api/register/`
 - **Method**: `POST`
 - **Body**:
-  \`\`\`json
+'''json
   {
       "email": "user@example.com",
       "name": "User",
@@ -98,7 +98,8 @@ python manage.py runserver
       "profile_pic": null,
       "password": "password"
   }
-  \`\`\`
+'''
+
 
 ### 2. Obtain JWT Token
 
