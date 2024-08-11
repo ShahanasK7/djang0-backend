@@ -14,26 +14,27 @@ This project is a Django backend setup with PostgreSQL for user authentication, 
 
 ### Step 1: Clone the Repository
 
-\`\`\`bash
+```bash
 git clone <repository_url>
 cd <repository_name>
-\`\`\`
+```
+
 
 ### Step 2: Create and Activate Virtual Environment
 
-\`\`\`bash
+```bash
 python -m venv myenv
-\`\`\`
+```
 
 For Windows:
-\`\`\`bash
+```bash
 myenv\Scripts\activate
-\`\`\`
+```
 
 For macOS/Linux:
-\`\`\`bash
+```bash
 source myenv/bin/activate
-\`\`\`
+```
 
 ### Step 3: Install Dependencies
 
@@ -89,7 +90,7 @@ python manage.py runserver
 - **URL**: `http://127.0.0.1:8000/api/register/`
 - **Method**: `POST`
 - **Body**:
-'''json
+```json
   {
       "email": "user@example.com",
       "name": "User",
@@ -98,7 +99,7 @@ python manage.py runserver
       "profile_pic": null,
       "password": "password"
   }
-'''
+```
 
 
 ### 2. Obtain JWT Token
@@ -106,48 +107,48 @@ python manage.py runserver
 - **URL**: `http://127.0.0.1:8000/api/token/`
 - **Method**: `POST`
 - **Body**:
-  \`\`\`json
+  ```json
   {
       "email": "user@example.com",
       "password": "password"
   }
-  \`\`\`
+  ```
 - **Response**:
-  \`\`\`json
+```json
   {
       "refresh": "your_refresh_token",
       "access": "your_access_token"
   }
-  \`\`\`
+ ```
 
 ### 3. Access Profile
 
 - **URL**: `http://127.0.0.1:8000/api/profile/`
 - **Method**: `GET`
 - **Headers**:
-  \`\`\`plaintext
+  ```plaintext
   Authorization: Bearer your_access_token
-  \`\`\`
+  ```
 
 ### 4. Admin View All Users
 
 - **URL**: `http://127.0.0.1:8000/api/admin/users/`
 - **Method**: `GET`
 - **Headers**:
-  \`\`\`plaintext
+  ```plaintext
   Authorization: Bearer your_access_token
-  \`\`\`
+ ```
 
 ### 5. Admin Update or Delete User
 
 - **URL**: `http://127.0.0.1:8000/api/admin/users/<user_id>/`
 - **Method**: `PUT` or `DELETE`
 - **Headers**:
-  \`\`\`plaintext
+ ``` plaintext
   Authorization: Bearer your_access_token
-  \`\`\`
+  ```
 - **Body (for PUT)**:
-  \`\`\`json
+ ```json
   {
       "email": "user@example.com",
       "name": "Updated User",
@@ -155,7 +156,7 @@ python manage.py runserver
       "employee_id": "EMP002",
       "profile_pic": null
   }
-  \`\`\`
+  ```
 
 ## Testing with Thunder Client
 
@@ -166,12 +167,12 @@ python manage.py runserver
      - **Method**: `POST`
      - **URL**: `http://127.0.0.1:8000/api/token/`
      - **Body**:
-       \`\`\`json
+      ``` json
        {
            "email": "user@example.com",
            "password": "password"
        }
-       \`\`\`
+       ```
    - Send the request and copy the `access` token from the response.
 
 3. **Access Profile**:
@@ -179,9 +180,9 @@ python manage.py runserver
      - **Method**: `GET`
      - **URL**: `http://127.0.0.1:8000/api/profile/`
      - **Headers**:
-       \`\`\`plaintext
+       ```plaintext
        Authorization: Bearer your_access_token
-       \`\`\`
+      ```
    - Send the request to access the profile data.
 
 By following these steps, you can set up, run, and test your Django backend with user authentication and admin roles. If you encounter any issues, please refer to the Django documentation or seek further assistance.
