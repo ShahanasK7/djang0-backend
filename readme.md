@@ -38,7 +38,8 @@ source myenv/bin/activate
 ### Step 3: Install Dependencies
 
 ```bash
-pip install django psycopg2-binary djangorestframework djangorestframework-simplejwt```
+pip install django psycopg2-binary djangorestframework djangorestframework-simplejwt
+```
 
 
 ### Step 4: Setup PostgreSQL
